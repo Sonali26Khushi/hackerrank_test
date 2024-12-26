@@ -1,0 +1,41 @@
+name: Run HackerRank Automation Test
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Schedule to run daily at midnight (UTC)
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  run-hackerrank-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # Or whichever version your framework supports
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Assuming you have a requirements.txt file with necessary dependencies
+          pip install robotframework  # Install Robot Framework
+          pip install selenium  # Install Selenium for web automation
+          pip install robotframework-seleniumlibrary  # Install Robot Framework SeleniumLibrary
+
+      - name: Run Robo Test
+        run: |
+          robot hackerranktest.robot  # Run the Robot Framework test file
+
+      - name: Capture Output
+        run: |
+          echo "Test run completed at $(date)" >> output.txt
+          cat output.xml >> output.txt  # Include any logs or output from the test
+
+      - name: Upload Output as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: hackerrank-test-output
+          path: output.txt
