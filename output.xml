@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2024-11-25T22:46:50.010790" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2024-12-26T15:56:54.676604" rpa="false" schemaversion="5">
 <suite id="s1" name="Hackerranktest" source="/home/project/Robot/hackerranktest.robot">
-<test id="s1-t1" name="Login to hackerrank" line="13">
+<test id="s1-t1" name="Login to HackerRank" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-25T22:46:50.426614" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
+<msg time="2024-12-26T15:56:55.040067" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>chrome_binary=${CHROME_PATH}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-25T22:46:50.425976" elapsed="9.063945"/>
+<status status="PASS" start="2024-12-26T15:56:55.039647" elapsed="9.514961"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-25T22:46:59.521374" elapsed="0.277134"/>
+<status status="PASS" start="2024-12-26T15:57:04.555443" elapsed="0.457950"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-25T22:46:59.800854" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
+<msg time="2024-12-26T15:57:05.020905" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-25T22:46:59.799116" elapsed="2.725528"/>
+<status status="PASS" start="2024-12-26T15:57:05.019678" elapsed="2.166003"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-25T22:47:02.526419" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
+<msg time="2024-12-26T15:57:07.186359" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-25T22:47:02.525919" elapsed="2.138827"/>
+<status status="PASS" start="2024-12-26T15:57:07.186006" elapsed="1.895349"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-25T22:47:04.675508" level="INFO">Clicking button 'xpath=/html/body/div[4]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div/form/div[3]/button'.</msg>
-<arg>xpath=/html/body/div[4]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div/form/div[3]/button</arg>
+<msg time="2024-12-26T15:57:09.082492" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-25T22:47:04.665248" elapsed="1.795480"/>
+<status status="PASS" start="2024-12-26T15:57:09.081970" elapsed="1.064413"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2024-11-25T22:47:16.649560" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-25T22:47:16.649971" level="FAIL">Text '"Dashboard"' did not appear in 10 seconds.</msg>
+<msg time="2024-12-26T15:57:20.273635" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-26T15:57:20.273816" level="FAIL">Text '"Dashboard"' did not appear in 10 seconds.</msg>
 <arg>"Dashboard"</arg>
-<arg>timeout=10sec</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2024-11-25T22:47:06.464936" elapsed="10.198187">Text '"Dashboard"' did not appear in 10 seconds.</status>
+<status status="FAIL" start="2024-12-26T15:57:10.148740" elapsed="10.128789">Text '"Dashboard"' did not appear in 10 seconds.</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath=/html/body/div[4]/div/div/div/div/div[3]/div/section[3]/div[2]/div/div/ul/li[8]/a/div</arg>
+<arg>xpath=//a[contains(text(), 'Python')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-11-25T22:47:16.663593" elapsed="0.000039"/>
+<status status="NOT RUN" start="2024-12-26T15:57:20.277902" elapsed="0.000074"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>"Python"</arg>
-<arg>timeout=10sec</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-11-25T22:47:16.663758" elapsed="0.000029"/>
+<status status="NOT RUN" start="2024-12-26T15:57:20.278137" elapsed="0.000032"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-11-25T22:47:16.663922" elapsed="0.000028"/>
+<status status="NOT RUN" start="2024-12-26T15:57:20.278536" elapsed="0.000041"/>
 </kw>
-<doc>Automates hackerrank login and performs basic operations</doc>
-<status status="FAIL" start="2024-11-25T22:46:50.424895" elapsed="26.239307">Text '"Dashboard"' did not appear in 10 seconds.</status>
+<doc>Automates HackerRank login and performs basic operations.</doc>
+<status status="FAIL" start="2024-12-26T15:56:55.038368" elapsed="25.240815">Text '"Dashboard"' did not appear in 10 seconds.</status>
 </test>
-<status status="FAIL" start="2024-11-25T22:46:50.030875" elapsed="26.633773"/>
+<status status="FAIL" start="2024-12-26T15:56:54.677957" elapsed="25.601819"/>
 </suite>
 <statistics>
 <total>
