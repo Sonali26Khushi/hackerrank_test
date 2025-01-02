@@ -22,9 +22,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install robotframework
-          pip install selenium
-          pip install robotframework-seleniumlibrary
+          pip install webdriver-manager
+          pip install robotframework-browser
+        
 
       - name: Run Robo Test
         run: robot hackerranktest.robot
