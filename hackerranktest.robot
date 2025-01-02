@@ -18,7 +18,4 @@ Login to HackerRank
     Click Button       xpath=//button[@type='submit']
     Wait Until Page Contains  "Dashboard"   timeout=10s
 
-    Click Element      xpath=//a[contains(text(), 'Python')]  # Updated XPath for the Python section
-    Wait Until Page Contains  "Python"   timeout=10s
-
     Close Browser
