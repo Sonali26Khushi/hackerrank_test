@@ -1,75 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2024-12-26T15:56:54.676604" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-02T12:52:18.972186" rpa="false" schemaversion="5">
 <suite id="s1" name="Hackerranktest" source="/home/project/Robot/hackerranktest.robot">
 <test id="s1-t1" name="Login to HackerRank" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-26T15:56:55.040067" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
+<msg time="2025-01-02T12:52:19.207631" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>chrome_binary=${CHROME_PATH}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-26T15:56:55.039647" elapsed="9.514961"/>
+<status status="PASS" start="2025-01-02T12:52:19.206664" elapsed="83.569034"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-26T15:57:04.555443" elapsed="0.457950"/>
+<status status="PASS" start="2025-01-02T12:53:42.776578" elapsed="0.139882"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-26T15:57:05.020905" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
+<msg time="2025-01-02T12:53:42.919281" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-26T15:57:05.019678" elapsed="2.166003"/>
+<status status="PASS" start="2025-01-02T12:53:42.918311" elapsed="0.858513"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-26T15:57:07.186359" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
+<msg time="2025-01-02T12:53:43.777552" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-26T15:57:07.186006" elapsed="1.895349"/>
+<status status="PASS" start="2025-01-02T12:53:43.777180" elapsed="0.539622"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-26T15:57:09.082492" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<msg time="2025-01-02T12:53:44.318373" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
 <arg>xpath=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-26T15:57:09.081970" elapsed="1.064413"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2024-12-26T15:57:20.273635" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-12-26T15:57:20.273816" level="FAIL">Text '"Dashboard"' did not appear in 10 seconds.</msg>
-<arg>"Dashboard"</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2024-12-26T15:57:10.148740" elapsed="10.128789">Text '"Dashboard"' did not appear in 10 seconds.</status>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath=//a[contains(text(), 'Python')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-12-26T15:57:20.277902" elapsed="0.000074"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>"Python"</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2024-12-26T15:57:20.278137" elapsed="0.000032"/>
+<status status="PASS" start="2025-01-02T12:53:44.317929" elapsed="0.489508"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-12-26T15:57:20.278536" elapsed="0.000041"/>
+<status status="PASS" start="2025-01-02T12:53:44.809714" elapsed="0.195835"/>
 </kw>
 <doc>Automates HackerRank login and performs basic operations.</doc>
-<status status="FAIL" start="2024-12-26T15:56:55.038368" elapsed="25.240815">Text '"Dashboard"' did not appear in 10 seconds.</status>
+<status status="PASS" start="2025-01-02T12:52:19.204215" elapsed="85.811805"/>
 </test>
-<status status="FAIL" start="2024-12-26T15:56:54.677957" elapsed="25.601819"/>
+<status status="PASS" start="2025-01-02T12:52:18.983347" elapsed="86.034021"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Hackerranktest">Hackerranktest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Hackerranktest">Hackerranktest</stat>
 </suite>
 </statistics>
 <errors>

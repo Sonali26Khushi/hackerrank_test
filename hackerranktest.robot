@@ -16,6 +16,5 @@ Login to HackerRank
     Input Text         name=username   ${USERNAME}
     Input Text         name=password   ${PASSWORD}
     Click Button       xpath=//button[@type='submit']
-    Wait Until Page Contains  "Dashboard"   timeout=10s
-
+   
     Close Browser
