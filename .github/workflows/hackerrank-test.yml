@@ -26,8 +26,11 @@ jobs:
       - name: Run Robo Test
         run: robot hackerranktest.robot
 
-      - name: Upload Output
+       - name: Upload Output
         uses: actions/upload-artifact@v3
         with:
           name: hackerrank-test-output
-          path: output.txt
+          path: |
+            output.xml
+            log.html
+            report.html
