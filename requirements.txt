@@ -2,4 +2,4 @@ robotframework==4.0.3
 robotframework-browser==5.1.2
 selenium==4.1.0
 webdriver-manager==3.8.3
-geckodriver-autoinstaller==0.2.2
+geckodriver-autoinstaller
