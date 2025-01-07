@@ -26,6 +26,11 @@ jobs:
           
           pip install --upgrade pip
           pip install -r requirements.txt
+          
+      - name: Print Python version and installed packages (for debugging)
+        run: |
+          python --version
+          pip freeze  # List installed packages and their versions
 
       - name: Run Robo Test
         run: robot hackerranktest.robot
