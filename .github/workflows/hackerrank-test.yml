@@ -26,7 +26,14 @@ jobs:
           
           pip install --upgrade pip
           pip install -r requirements.txt
-          
+
+      - name: Install WebDriver Manager and ChromeDriver
+        run: |
+        
+          pip install webdriver-manager
+          python -m webdriver_manager.chrome
+      
+
       - name: Print Python version and installed packages (for debugging)
         run: |
           python --version

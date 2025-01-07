@@ -1,78 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-07T18:11:01.795908" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-07T18:22:53.235561" rpa="false" schemaversion="5">
 <suite id="s1" name="Hackerranktest" source="/home/project/Robot/hackerranktest.robot">
-<test id="s1-t1" name="Login to HackerRank" line="9">
-<kw name="Create Chrome Options">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-01-07T18:11:01.819499" level="INFO">${options} = {'headless': 'True', 'no-sandbox': 'True', 'disable-dev-shm-usage': 'True'}</msg>
-<var>${options}</var>
-<arg>headless=True</arg>
-<arg>no-sandbox=True</arg>
-<arg>disable-dev-shm-usage=True</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-01-07T18:11:01.819230" elapsed="0.000302"/>
-</kw>
-<return>
-<value>${options}</value>
-<status status="PASS" start="2025-01-07T18:11:01.819599" elapsed="0.000043"/>
-</return>
-<msg time="2025-01-07T18:11:01.819794" level="INFO">${options} = {'headless': 'True', 'no-sandbox': 'True', 'disable-dev-shm-usage': 'True'}</msg>
-<var>${options}</var>
-<doc>Creates and returns Chrome options for headless mode.</doc>
-<status status="PASS" start="2025-01-07T18:11:01.818593" elapsed="0.001224"/>
-</kw>
-<kw name="Setup ChromeDriver">
-<kw name="Run Process">
-<msg time="2025-01-07T18:11:01.821474" level="FAIL">No keyword with name 'Run Process' found.</msg>
-<arg>python</arg>
-<arg>-c</arg>
-<arg>"from webdriver_manager.chrome import ChromeDriverManager; print(ChromeDriverManager().install())"</arg>
-<arg>shell=True</arg>
-<status status="FAIL" start="2025-01-07T18:11:01.821302" elapsed="0.000219">No keyword with name 'Run Process' found.</status>
-</kw>
-<doc>Set up the ChromeDriver using webdriver-manager.</doc>
-<status status="FAIL" start="2025-01-07T18:11:01.820087" elapsed="0.001545">No keyword with name 'Run Process' found.</status>
-</kw>
-<kw name="Open Browser">
+<test id="s1-t1" name="Login to HackerRank" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-07T18:22:53.383318" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<arg>options=${options}</arg>
-<arg>chrome_binary=${CHROME_PATH}</arg>
-<status status="NOT RUN" start="2025-01-07T18:11:01.821840" elapsed="0.000302"/>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-07T18:22:53.382579" elapsed="20.535000"/>
 </kw>
-<kw name="Maximize Browser Window">
-<status status="NOT RUN" start="2025-01-07T18:11:01.822596" elapsed="0.000021"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-07T18:23:13.925959" elapsed="0.521268"/>
 </kw>
-<kw name="Input Text">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-07T18:23:14.465652" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${USERNAME}</arg>
-<status status="NOT RUN" start="2025-01-07T18:11:01.822991" elapsed="0.000021"/>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-07T18:23:14.448140" elapsed="2.929612"/>
 </kw>
-<kw name="Input Text">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-07T18:23:17.395640" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${PASSWORD}</arg>
-<status status="NOT RUN" start="2025-01-07T18:11:01.823294" elapsed="0.000021"/>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-07T18:23:17.382162" elapsed="1.618450"/>
 </kw>
-<kw name="Click Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-07T18:23:19.017100" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
 <arg>xpath=//button[@type='submit']</arg>
-<status status="NOT RUN" start="2025-01-07T18:11:01.823740" elapsed="0.000237"/>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-07T18:23:19.009105" elapsed="1.339174"/>
 </kw>
-<kw name="Close Browser">
-<status status="NOT RUN" start="2025-01-07T18:11:01.824855" elapsed="0.000028"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-07T18:23:20.349153" elapsed="0.204106"/>
 </kw>
 <doc>Automates HackerRank login and performs basic operations.</doc>
-<status status="FAIL" start="2025-01-07T18:11:01.817654" elapsed="0.007591">No keyword with name 'Run Process' found.</status>
+<status status="PASS" start="2025-01-07T18:22:53.380391" elapsed="27.173484"/>
 </test>
-<status status="FAIL" start="2025-01-07T18:11:01.798085" elapsed="0.027743"/>
+<status status="PASS" start="2025-01-07T18:22:53.237772" elapsed="27.316677"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Hackerranktest">Hackerranktest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Hackerranktest">Hackerranktest</stat>
 </suite>
 </statistics>
 <errors>
