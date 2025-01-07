@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-07T12:35:08.865682" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-07T16:29:55.601218" rpa="false" schemaversion="5">
 <suite id="s1" name="Hackerranktest" source="/home/project/Robot/hackerranktest.robot">
 <test id="s1-t1" name="Login to HackerRank" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-07T12:35:09.242958" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
+<msg time="2025-01-07T16:29:55.768378" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>chrome_binary=${CHROME_PATH}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-07T12:35:09.242167" elapsed="15.390530"/>
+<status status="PASS" start="2025-01-07T16:29:55.767438" elapsed="76.318304"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-07T12:35:24.645786" elapsed="0.309364"/>
+<status status="PASS" start="2025-01-07T16:31:12.086234" elapsed="0.438134"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-07T12:35:24.958186" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
+<msg time="2025-01-07T16:31:12.525869" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-07T12:35:24.955833" elapsed="2.560474"/>
+<status status="PASS" start="2025-01-07T16:31:12.524784" elapsed="1.258090"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-07T12:35:27.517394" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
+<msg time="2025-01-07T16:31:13.784520" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-07T12:35:27.516965" elapsed="1.372832"/>
+<status status="PASS" start="2025-01-07T16:31:13.783884" elapsed="0.703124"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-07T12:35:28.891328" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<msg time="2025-01-07T16:31:14.491918" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
 <arg>xpath=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-07T12:35:28.890856" elapsed="1.118421"/>
+<status status="PASS" start="2025-01-07T16:31:14.487407" elapsed="0.561261"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-07T12:35:30.011931" elapsed="0.250175"/>
+<status status="PASS" start="2025-01-07T16:31:15.051550" elapsed="0.233060"/>
 </kw>
 <doc>Automates HackerRank login and performs basic operations.</doc>
-<status status="PASS" start="2025-01-07T12:35:09.238828" elapsed="21.023891"/>
+<status status="PASS" start="2025-01-07T16:29:55.764890" elapsed="79.520913"/>
 </test>
-<status status="PASS" start="2025-01-07T12:35:08.868928" elapsed="21.395154"/>
+<status status="PASS" start="2025-01-07T16:29:55.603712" elapsed="79.686834"/>
 </suite>
 <statistics>
 <total>
