@@ -1,20 +1,20 @@
 name: Run HackerRank Automation Test
-
+ 
 on:
   workflow_dispatch:  # Manual trigger
   push:
     branches:
       - main  # Automatic trigger on push to 'main' branch
-
+ 
 jobs:
   run-hackerrank-test:
     runs-on: ubuntu-latest
     timeout-minutes: 60  # Timeout after 1 hour
-
+ 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+ 
       - name: Install dependencies for Chrome
         run: |
           sudo apt-get update
@@ -31,40 +31,34 @@ jobs:
             libatk1.0-0 \
             libcups2 \
             libnss3 \
-            libgdk-pixbuf2.0-0 \
-            # Install missing libraries for headless chrome
-            libxcomposite1 \
-            libxdamage1 \
-            libfontconfig1 \
-            libxi6 \
-            libxtst6
-
+            libgdk-pixbuf2.0-0
+ 
       - name: Set CHROME_BIN path
         run: echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
-
+ 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10.12'
-
+ 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-
+ 
       - name: Install WebDriver Manager and ChromeDriver
         run: |
           pip install webdriver-manager
           python -m webdriver_manager.chrome
-
+ 
       - name: Print Python version and installed packages (for debugging)
         run: |
           python --version
           pip freeze  # List installed packages and their versions
-
+ 
       - name: Run Robo Test
         run: robot hackerranktest.robot
-
+ 
       - name: Upload Output
         uses: actions/upload-artifact@v3
         with:
