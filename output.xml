@@ -1,63 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-08T13:28:46.545522" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-01-08T14:10:27.277920" rpa="false" schemaversion="5">
 <suite id="s1" name="Hackerranktest" source="/home/project/Robot/hackerranktest.robot">
 <test id="s1-t1" name="Login to HackerRank" line="11">
 <kw name="Set Chrome Options">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-01-08T13:28:46.700462" level="INFO">${options} = {'args': "('--headless', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage')"}</msg>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-08T14:10:27.418889" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x776f96980d30&gt;</msg>
 <var>${options}</var>
-<arg>args=('--headless', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage')</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-01-08T13:28:46.700204" elapsed="0.000298"/>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys, selenium.webdriver.chrome.options</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-08T14:10:27.418591" elapsed="0.000334"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>'--headless'</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-08T14:10:27.419048" elapsed="0.000151"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>'--disable-gpu'</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-08T14:10:27.419304" elapsed="0.000130"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>'--no-sandbox'</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-08T14:10:27.419530" elapsed="0.000127"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>'--disable-dev-shm-usage'</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-08T14:10:27.419751" elapsed="0.000247"/>
 </kw>
 <return>
 <value>${options}</value>
-<status status="PASS" start="2025-01-08T13:28:46.700582" elapsed="0.000052"/>
+<status status="PASS" start="2025-01-08T14:10:27.420066" elapsed="0.000051"/>
 </return>
-<msg time="2025-01-08T13:28:46.700824" level="INFO">${CHROME_OPTIONS} = {'args': "('--headless', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage')"}</msg>
+<msg time="2025-01-08T14:10:27.420257" level="INFO">${CHROME_OPTIONS} = &lt;selenium.webdriver.chrome.options.Options object at 0x776f96980d30&gt;</msg>
 <var>${CHROME_OPTIONS}</var>
-<status status="PASS" start="2025-01-08T13:28:46.699450" elapsed="0.001401"/>
+<status status="PASS" start="2025-01-08T14:10:27.417907" elapsed="0.002378"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-08T13:28:46.703706" level="INFO">Opening browser 'Chrome' to base url 'https://www.hackerrank.com/auth/login'.</msg>
-<arg>${URL}</arg>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-08T14:10:27.420623" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${BROWSER}</arg>
-<arg>chrome_options=${CHROME_OPTIONS}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-08T13:28:46.703207" elapsed="14.132440"/>
+<arg>options=${CHROME_OPTIONS}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-01-08T14:10:27.420422" elapsed="1.555392"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-08T14:10:28.976549" level="INFO">Opening url 'https://www.hackerrank.com/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-08T14:10:28.976285" elapsed="49.353379"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-08T13:29:00.839882" elapsed="0.520267"/>
+<status status="PASS" start="2025-01-08T14:11:18.339690" elapsed="0.219728"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-08T13:29:01.365080" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
+<msg time="2025-01-08T14:11:18.573230" level="INFO">Typing text 'sonali.pramanik@tcs.com' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-08T13:29:01.361235" elapsed="2.933965"/>
+<status status="PASS" start="2025-01-08T14:11:18.566804" elapsed="1.913841"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-08T13:29:04.305999" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
+<msg time="2025-01-08T14:11:20.482455" level="INFO">Typing text '0705@Khushi' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-08T13:29:04.297319" elapsed="1.300925"/>
+<status status="PASS" start="2025-01-08T14:11:20.481965" elapsed="1.191090"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-08T13:29:05.607565" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<msg time="2025-01-08T14:11:21.674891" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
 <arg>xpath=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-08T13:29:05.600250" elapsed="1.335490"/>
+<status status="PASS" start="2025-01-08T14:11:21.674039" elapsed="1.379637"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-08T13:29:06.936451" elapsed="0.191408"/>
+<status status="PASS" start="2025-01-08T14:11:23.054462" elapsed="0.231704"/>
 </kw>
 <doc>Automates HackerRank login and performs basic operations.</doc>
-<status status="PASS" start="2025-01-08T13:28:46.698721" elapsed="20.430296"/>
+<status status="PASS" start="2025-01-08T14:10:27.417010" elapsed="55.871621"/>
 </test>
-<status status="PASS" start="2025-01-08T13:28:46.547355" elapsed="20.583332"/>
+<status status="PASS" start="2025-01-08T14:10:27.280112" elapsed="56.009364"/>
 </suite>
 <statistics>
 <total>

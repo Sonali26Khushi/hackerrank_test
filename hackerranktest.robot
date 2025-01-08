@@ -11,7 +11,8 @@ ${PASSWORD}      0705@Khushi
 Login to HackerRank
     [Documentation]    Automates HackerRank login and performs basic operations.
     ${CHROME_OPTIONS}=    Set Chrome Options
-    Open Browser       ${URL}   ${BROWSER}   chrome_options=${CHROME_OPTIONS}
+    Create WebDriver    ${BROWSER}    options=${CHROME_OPTIONS}
+    Go To    ${URL}
     Maximize Browser Window
     Input Text         name=username   ${USERNAME}
     Input Text         name=password   ${PASSWORD}
@@ -20,6 +21,9 @@ Login to HackerRank
 
 *** Keywords ***
 Set Chrome Options
-    # Create a dictionary for the Chrome options
-    ${options}=    Create Dictionary    args=('--headless', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage')
+    ${options}=    Evaluate    sys.modules['selenium.webdriver.chrome.options'].Options()    sys, selenium.webdriver.chrome.options
+    Call Method    ${options}    add_argument    '--headless'
+    Call Method    ${options}    add_argument    '--disable-gpu'
+    Call Method    ${options}    add_argument    '--no-sandbox'
+    Call Method    ${options}    add_argument    '--disable-dev-shm-usage'
     RETURN    ${options}
