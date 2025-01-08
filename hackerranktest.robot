@@ -10,7 +10,7 @@ ${PASSWORD}      0705@Khushi
 *** Test Cases ***
 Login to HackerRank
     [Documentation]    Automates HackerRank login and performs basic operations.
-    Open Browser       ${URL}   ${BROWSER}
+    Open Browser       ${URL}   ${BROWSER}  headless=True
     Maximize Browser Window
     Input Text         name=username   ${USERNAME}
     Input Text         name=password   ${PASSWORD}
