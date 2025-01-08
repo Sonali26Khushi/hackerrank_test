@@ -31,7 +31,13 @@ jobs:
             libatk1.0-0 \
             libcups2 \
             libnss3 \
-            libgdk-pixbuf2.0-0
+            libgdk-pixbuf2.0-0 \
+            # Install missing libraries for headless chrome
+            libxcomposite1 \
+            libxdamage1 \
+            libfontconfig1 \
+            libxi6 \
+            libxtst6
 
       - name: Set CHROME_BIN path
         run: echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
